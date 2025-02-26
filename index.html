@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educator Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #b3daff;
+        }
+        header {
+            background: linear-gradient(90deg, #005bb5, #008cff);
+            padding: 30px;
+            color: white;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            font-size: 50px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-family: 'Georgia', serif;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        section {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.3s ease;
+            font-size: 22px;
+            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: left;
+            background-color: #ffffff;
+        }
+        section:hover {
+            transform: scale(1.05);
+        }
+        .content {
+            display: none;
+            font-size: 24px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            max-width: 800px;
+            margin: auto;
+            text-align: justify;
+        }
+        #profile { background-color: #ffb3b3; }
+        #curriculum { background-color: #ffae69; }
+        #expectations { background-color: #b3ffb3; }
+        #reflections { background-color: #b3b3ff; }
+        #methodology { background-color: #ffff99; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Portfolio Andres</h1>
+    </header>
+    <section id="profile" onclick="toggleContent('profileContent')">
+<center>
+        <h2>Profile</h2>
+</center>
+        <div id="profileContent" class="content">
+			<center>
+			<img src="PITUFO.jpg" width="350" height="450">
+				</center>
+            <p>I am a dedicated and innovative educator committed to creating meaningful, interactive and fun learning experiences for my students. My teaching approach focuses on fostering engagement, collaboration, and real-world application of knowledge. I ensure that my students develop critical thinking skills, teamwork abilities, and a passion for lifelong learning.
+I am continuously searching for professional development opportunities to evolve my teaching methods and adapt to the evolving needs of my students. My goal is to create an inclusive classroom where every learner feels valued, challenged, and inspired to reach their full potential.
+</p>
+        </div>
+    </section>
+    
+    <section id="curriculum" onclick="toggleContent('curriculumContent')">
+<center>
+        <h2>Curriculum Vitae (CV)</h2>
+</center>
+        <div id="curriculumContent" class="content">
+			<br>
+<br>
+<br>
+<br>
+						<center>
+			<img src="HOJA DE VIDA (1)_page-0001.jpg" width="450" height="550">
+				</center>
+            <p>
+				
+<br>
+<br>
+<br>
+<br>
+				
+WORK EXPERIENCE
+Call Agent – TELEPERFORMANCE
+📅 January 2022 – November 2022
+
+Handled call repetitions for a communication product designed for individuals with hearing impairments.
+Provided solutions to help users communicate effectively using the product.
+
+<br>
+<br>
+<br>
+<br>
+Customer Service Representative – INTELCIA
+📅 April 2023 – November 2023
+
+Provided customer support for BBVA Colombia, resolving issues and answering inquiries about banking products and digital platforms.
+Worked as an advisor in the bank’s security line pilot project, assisting with card and digital platform unlocking, demonstrating adaptability in my role.</p>
+        </div>
+    </section>
+    
+    <section id="expectations" onclick="toggleContent('expectationsContent')">
+<center>
+        <h2>Teaching and Learning Expectations</h2>
+</center>
+        <div id="expectationsContent" class="content">
+            <p>As a teacher, I'll strive to create an inclusive and motivating learning environment where students feel safe to participate and grow. I'll encourage critical thinking, autonomy, and a genuine interest in learning through dynamic and engaging strategies. My goal will be to guide students in developing their skills and confidence in a way that fosters lifelong learning.</p>
+        </div>
+    </section>
+    
+    <section id="reflections" onclick="toggleContent('reflectionsContent')">
+<center>
+        <h2>Reflections</h2>
+</center>
+        <div id="reflectionsContent" class="content">
+            <p>On a personal level, I'll see teaching as a continuous improvement process. Every classroom experience will be an opportunity to learn and refine my teaching practices. Academically, I'll reflect on the effectiveness of my methods and seek ways to adapt them to better meet my students’ needs.</p>
+        </div>
+    </section>
+    
+    <section id="methodology" onclick="toggleContent('methodologyContent')">
+<center>
+        <h2>Teaching Methodology</h2>
+</center>
+        <div id="methodologyContent" class="content">
+            <ul>
+<br>
+<br>
+				<li><strong>Gamification:</strong> I'll integrate game elements such as points, challenges, and rewards to increase motivation and engagement in learning.</li>
+<br>
+<br>
+                <li><strong>Cooperative Learning:</strong> I'll promote teamwork by assigning roles and encouraging collaboration among students to solve problems and achieve learning goals together.</li>
+<br>
+<br>
+                <li><strong>Project-Based Learning:</strong> I'll guide students in developing meaningful projects related to the content, allowing them to apply knowledge in real-life contexts while enhancing their research and critical thinking skills. </li>
+            </ul>
+        </div>
+    </section>
+    
+    <script>
+        function toggleContent(id) {
+            var sections = document.querySelectorAll('.content');
+            sections.forEach(section => {
+                if (section.id !== id) {
+                    section.style.display = "none";
+                    section.style.opacity = "0";
+                }
+            });
+            var content = document.getElementById(id);
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+                setTimeout(() => { content.style.opacity = "1"; }, 50);
+            } else {
+                content.style.opacity = "0";
+                setTimeout(() => { content.style.display = "none"; }, 300);
+            }
+        }
+    </script>
+</body>
+</html>
